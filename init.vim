@@ -14,6 +14,7 @@ colo onedark
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ","
+let g:bracey_server_port = 5501
 
 
 lua << EOF
@@ -27,7 +28,7 @@ EOF
 set nu
 let g:closer_no_mappings=0
 set relativenumber
-set so=5
+set so=10
 set timeoutlen=500 "for leader key
 set autoread
 set updatetime=200

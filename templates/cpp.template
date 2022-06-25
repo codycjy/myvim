@@ -29,9 +29,9 @@ void solve()
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    int n=1;
-   //  cin>>n;
-    while(n--)
-    solve();
+	ios::sync_with_stdio(false);
+	int n=1;
+	// cin>>n;
+	while(n--)
+		solve();
 }

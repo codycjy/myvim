@@ -23,5 +23,12 @@ Plug 'navarasu/onedark.nvim'
 Plug 'thinca/vim-quickrun'
 Plug 'github/copilot.vim'
 Plug 'tibabit/vim-templates'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+"Plug 'nvim-telescope/telescope.nvim'
+Plug 'joereynolds/SQHell.vim'
+Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'turbio/bracey.vim'
+Plug 'posva/vim-vue'
 call plug#end()
 
