@@ -1,0 +1,11 @@
+// be careful not to condense the hierarchy as it breaks pyls
+{
+	"languageserver": {
+		"go": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"trace.server": "verbose",
+			"filetypes": ["go"]
+		}
+	}
+}
