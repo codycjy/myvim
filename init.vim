@@ -3,6 +3,10 @@ source ~/.config/nvim/scripts/keymap.vim
 source ~/.config/nvim/scripts/autocmd.vim
 source ~/.config/nvim/scripts/coc-config.vim
 source ~/.config/nvim/scripts/config.lua
+source ~/.config/nvim/scripts/auto.vim
+lua require('unitest')
+lua require('whichkey-config')
+lua require('dap-config')
 
 
 set background=dark
@@ -59,11 +63,7 @@ if !exists('g:airline_symbols')
 endif
 
 
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
 
+augroup filetypedetect
+    autocmd BufRead,BufNewFile *.jenkins Jenkinsfile set filetype=groovy
+augroup END

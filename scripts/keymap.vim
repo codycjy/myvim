@@ -2,11 +2,11 @@ set rnu
 set nu
 let g:mapleader=" "
 set colorcolumn=80
-
-" let g:floaterm_keymap_new    = '<F6>'
-" let g:floaterm_keymap_prev   = '<F7>'
-" let g:floaterm_keymap_next   = '<F8>'
+let g:floaterm_keymap_new    = '<c-n>'
+let g:floaterm_keymap_prev   = '<F35>'
+" let g:floaterm_keymap_next   = '<F36>'
 let g:floaterm_keymap_toggle = '<F2>'
+let g:floaterm_shell = '/bin/zsh'
 
 " nnoremap   <silent>   <F6>    :FloatermNew<CR>
 " tnoremap   <silent>   <F6>    <C-\><C-n>:FloatermNew<CR>
@@ -35,7 +35,12 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>ft <cmd>TodoTelescope keywords=TODO,FIX<cr>
 
 " Tagbar
-" nmap <F7> :TagbarToggle<CR> "Disable because startup too long
+nmap <F7> :TagbarToggle<CR> 
+
+
+" Neotest
+nnoremap <leader>rr <cmd>UltestNearest<cr> 
+nnoremap <leader>rd <cmd>UltestDebugNearest<cr> 
 
 
 " vim-airline
@@ -61,7 +66,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:everforest_background = 'hard'
 
 " vimspector
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+" let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " nerdtree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
@@ -131,3 +136,7 @@ EOF
 
 set guifont=DroidSansMono\ Nerd\ Font\ 11
 let g:airline_powerline_fonts = 1
+
+" gotests
+nnoremap <leader>gt <Cmd>GoTests<CR>
+let g:gotests_template = '' " https://github.com/buoto/gotests-vim/pull/10/files
