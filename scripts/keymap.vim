@@ -38,9 +38,6 @@ nnoremap <leader>ft <cmd>TodoTelescope keywords=TODO,FIX<cr>
 nmap <F7> :TagbarToggle<CR> 
 
 
-" Neotest
-nnoremap <leader>rr <cmd>UltestNearest<cr> 
-nnoremap <leader>rd <cmd>UltestDebugNearest<cr> 
 
 
 " vim-airline

@@ -19,6 +19,7 @@ Plug 'majutsushi/tagbar'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+Plug 'nvim-telescope/telescope-dap.nvim'
 "Plug 'puremourning/vimspector'
 Plug 'preservim/nerdtree'
 Plug 'tell-k/vim-autopep8'
@@ -45,7 +46,9 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'mfussenegger/nvim-dap-python'
+Plug 'leoluz/nvim-dap-go'
 " Go func
 Plug 'buoto/gotests-vim'
+Plug 'theHamsta/nvim-dap-virtual-text'
 call plug#end()
 
