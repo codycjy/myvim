@@ -37,6 +37,8 @@ vim.api.nvim_set_keymap('n', '<leader>tx', '<cmd>lua require("neotest").run.stop
 vim.api.nvim_set_keymap('n', '<leader>td', '<cmd>lua require("neotest").run.attach()<CR>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', '<leader>rd', '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>', { noremap = true, silent = true })
 
+-- nnoremap <silent>[n <cmd>lua require("neotest").jump.prev({ status = "failed" })<CR>
+-- nnoremap <silent>]n <cmd>lua require("neotest").jump.next({ status = "failed" })<CR>
 
 
 
