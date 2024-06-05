@@ -10,8 +10,8 @@ lua require('dap-config')
 
 
 set background=dark
-colo onedark 
 
+colorscheme nordic
 
 "Floaterm
 let g:floaterm_autoinsert=1
@@ -62,8 +62,30 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+let g:rainbow_delimiters = {
+    \ 'strategy': {
+        \ '': rainbow_delimiters#strategy.global,
+        \ 'vim': rainbow_delimiters#strategy.local,
+    \ },
+    \ 'query': {
+        \ '': 'rainbow-delimiters',
+        \ 'lua': 'rainbow-blocks',
+    \ },
+    \ 'priority': {
+        \ '': 110,
+        \ 'lua': 210,
+    \ },
+    \ 'highlight': [
+        \ 'RainbowDelimiterYellow',
+        \ 'RainbowDelimiterBlue',
+        \ 'RainbowDelimiterGreen',
+        \ 'RainbowDelimiterViolet',
+    \ ],
+\ }
 
 
 augroup filetypedetect
     autocmd BufRead,BufNewFile *.jenkins Jenkinsfile set filetype=groovy
 augroup END
+
+lua require('Comment').setup()

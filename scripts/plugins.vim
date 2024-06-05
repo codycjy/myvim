@@ -1,5 +1,6 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'sainnhe/everforest'
+Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'navarasu/onedark.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'github/copilot.vim'
@@ -50,5 +51,7 @@ Plug 'leoluz/nvim-dap-go'
 " Go func
 Plug 'buoto/gotests-vim'
 Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'hiphish/rainbow-delimiters.nvim'
+Plug 'numToStr/Comment.nvim'
 call plug#end()
 
