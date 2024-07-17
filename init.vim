@@ -1,4 +1,5 @@
 source ~/.config/nvim/scripts/plugins.vim
+source ~/.config/nvim/scripts/vars.vim
 source ~/.config/nvim/scripts/keymap.vim
 source ~/.config/nvim/scripts/autocmd.vim
 source ~/.config/nvim/scripts/coc-config.vim
@@ -7,6 +8,7 @@ source ~/.config/nvim/scripts/auto.vim
 lua require('unitest')
 lua require('whichkey-config')
 lua require('dap-config')
+lua require('fittencode').setup()
 
 
 set background=dark
@@ -82,6 +84,11 @@ let g:rainbow_delimiters = {
         \ 'RainbowDelimiterViolet',
     \ ],
 \ }
+let g:blamer_enabled = 1
+let g:blamer_delay = 300
+let g:blamer_show_in_visual_modes = 0
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_prefix = ' > '
 
 
 augroup filetypedetect

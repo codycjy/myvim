@@ -3,7 +3,8 @@ Plug 'sainnhe/everforest'
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'navarasu/onedark.nvim'
 Plug 'folke/which-key.nvim'
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
+Plug 'luozhiya/fittencode.nvim'
 Plug 'voldikss/vim-floaterm'
 Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -28,7 +29,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ggandor/leap.nvim'
 Plug 'airblade/vim-gitgutter'
-"Plug 'ActivityWatch/aw-watcher-vim' " cannot use in wsl
+Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'folke/todo-comments.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neovim/nvim-lspconfig'
@@ -36,6 +37,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'MunifTanjim/prettier.nvim'
 " Unit test
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'nvim-neotest/neotest'
 Plug 'nvim-neotest/neotest-go'
@@ -53,5 +55,6 @@ Plug 'buoto/gotests-vim'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'hiphish/rainbow-delimiters.nvim'
 Plug 'numToStr/Comment.nvim'
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 
