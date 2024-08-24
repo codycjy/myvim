@@ -101,7 +101,27 @@ dap.adapters.cppdbg = {
   command = '/home/saltfish/.config/nvim/tools/cpptools-linux/extension/debugAdapters/bin/OpenDebugAD7',
 }
 
-local dap = require('dap')
+dap.adapters.codelldb = {
+  type = 'server',
+  port = "${port}",
+  executable = {
+    -- CHANGE THIS to your path!
+    command = '/home/saltfish/.config/nvim/tools/codelldb/extension/adapter/codelldb',
+    args = {"--port", "${port}"},
+
+    -- On windows you may have to uncomment this:
+    -- detached = false,
+  }
+}
+
+dap.adapters.gdb = {
+  type = "executable",
+  command = "gdb",
+  args = { "--interpreter=dap", "--eval-command", "set print pretty on" }
+}
+-- cpp config
+-- WARN: IF ANY WRONG WITH DEBUG, ENSURE YOU COMPILE WITH -g FLAG
+-- local dap = require('dap')
 dap.configurations.cpp = {
   {
     name = "Launch file",
@@ -113,16 +133,54 @@ dap.configurations.cpp = {
     cwd = '${workspaceFolder}',
     stopAtEntry = true,
   },
-  -- {
-  --   name = 'Attach to gdbserver :1234',
-  --   type = 'cppdbg',
-  --   request = 'launch',
-  --   MIMode = 'gdb',
-  --   miDebuggerServerAddress = 'localhost:1234',
-  --   miDebuggerPath = '/usr/bin/gdb',
-  --   cwd = '${workspaceFolder}',
-  --   program = function()
-  --     return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-  --   end,
-  -- },
+  {
+    name = 'Attach to gdbserver :1234',
+    type = 'cppdbg',
+    request = 'launch',
+    MIMode = 'gdb',
+    miDebuggerServerAddress = 'localhost:1234',
+    miDebuggerPath = '/usr/bin/gdb',
+    cwd = '${workspaceFolder}',
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+  },
 }
+
+-- cpp config
+-- dap.configurations.cpp = {
+--   {
+--     name = "Launch",
+--     type = "gdb",
+--     request = "launch",
+--     program = function()
+--       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--     end,
+--     cwd = "${workspaceFolder}",
+--     stopAtBeginningOfMainSubprogram = false,
+--   },
+--   {
+--     name = "Select and attach to process",
+--     type = "gdb",
+--     request = "attach",
+--     program = function()
+--        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--     end,
+--     pid = function()
+--        local name = vim.fn.input('Executable name (filter): ')
+--        return require("dap.utils").pick_process({ filter = name })
+--     end,
+--     cwd = '${workspaceFolder}'
+--   },
+--   {
+--     name = 'Attach to gdbserver :1234',
+--     type = 'gdb',
+--     request = 'attach',
+--     target = 'localhost:1234',
+--     program = function()
+--        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--     end,
+--     cwd = '${workspaceFolder}'
+--   },
+-- }
+-- local dap = require('dap')

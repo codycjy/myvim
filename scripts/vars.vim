@@ -1,2 +1,2 @@
 
-let g:aw_apiurl_host="home.saltfish.best"
+let g:aw_apiurl_host="activity.saltfish.best"

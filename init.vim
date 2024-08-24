@@ -2,14 +2,16 @@ source ~/.config/nvim/scripts/plugins.vim
 source ~/.config/nvim/scripts/vars.vim
 source ~/.config/nvim/scripts/keymap.vim
 source ~/.config/nvim/scripts/autocmd.vim
-source ~/.config/nvim/scripts/coc-config.vim
 source ~/.config/nvim/scripts/config.lua
 source ~/.config/nvim/scripts/auto.vim
+source ~/.config/nvim/scripts/coc-config.vim
 lua require('unitest')
 lua require('whichkey-config')
 lua require('dap-config')
-lua require('fittencode').setup()
+" inoremap <Tab> <Nop>
 
+" inoremap <C-K> <C-O>:call FittenAccept()<CR>
+"imap <C-K> <C-r>=FittenAccept()<CR>
 
 set background=dark
 
