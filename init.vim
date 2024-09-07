@@ -8,6 +8,8 @@ source ~/.config/nvim/scripts/coc-config.vim
 lua require('unitest')
 lua require('whichkey-config')
 lua require('dap-config')
+lua require('config')
+lua require('indent')
 " inoremap <Tab> <Nop>
 
 " inoremap <C-K> <C-O>:call FittenAccept()<CR>
