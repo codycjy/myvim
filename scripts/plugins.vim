@@ -43,6 +43,8 @@ Plug 'nvim-neotest/neotest'
 Plug 'nvim-neotest/neotest-go'
 Plug 'nvim-neotest/neotest-python'
 Plug 'nvim-neotest/neotest-plenary'
+Plug 'alfaix/neotest-gtest'
+Plug 'alepez/vim-gtest'
 Plug 'nvim-neotest/neotest-vim-test'
 " Debug DAP
 Plug 'mfussenegger/nvim-dap'
