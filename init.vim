@@ -8,7 +8,6 @@ source ~/.config/nvim/scripts/coc-config.vim
 lua require('unitest')
 lua require('whichkey-config')
 lua require('dap-config')
-lua require('config')
 lua require('indent')
 " inoremap <Tab> <Nop>
 
@@ -100,3 +99,7 @@ augroup filetypedetect
 augroup END
 
 lua require('Comment').setup()
+
+lua << EOF
+require('leetcode').setup({})
+EOF

@@ -19,7 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' "airline 的主题
 Plug 'majutsushi/tagbar'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'nvim-telescope/telescope-dap.nvim'
 "Plug 'puremourning/vimspector'
@@ -58,5 +58,15 @@ Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'hiphish/rainbow-delimiters.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'APZelos/blamer.nvim'
+" LeetCode
+" kawre/leetcode.nvim
+Plug 'kawre/leetcode.nvim', { 'do': ':TSUpdate html' }
+
+" Dependencies
+Plug 'MunifTanjim/nui.nvim'
+
+" Optional dependencies
+Plug 'rcarriga/nvim-notify'
+Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 
