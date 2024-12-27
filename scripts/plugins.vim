@@ -68,5 +68,7 @@ Plug 'MunifTanjim/nui.nvim'
 " Optional dependencies
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-tree/nvim-web-devicons'
+" Yazi Config
+Plug 'mikavilpas/yazi.nvim'
 call plug#end()
 

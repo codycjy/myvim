@@ -33,3 +33,7 @@ vim.g.blamer_enabled = true
 vim.g.blamer_show_in_insert_modes = 0
 vim.g.blamer_prefix='>'
 vim.g.blamer_delay = 300
+
+vim.keymap.set("n", "<leader>-", function()
+  require("yazi").yazi()
+end)

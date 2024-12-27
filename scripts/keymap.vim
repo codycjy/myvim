@@ -37,7 +37,8 @@ nnoremap <leader>ft <cmd>TodoTelescope keywords=TODO,FIX<cr>
 " Tagbar
 nmap <F7> :TagbarToggle<CR> 
 
-
+" Yazi
+nnoremap <leader>- :lua require("yazi").yazi()<CR>
 
 
 " vim-airline
