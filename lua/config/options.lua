@@ -3,3 +3,4 @@
 -- Add any additional options here
 -- set jumpoptions+=stack
 vim.opt.jumpoptions = "stack"
+vim.g.autoformat = false

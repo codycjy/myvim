@@ -19,7 +19,7 @@ return {
     opts = {
       colorscheme = function()
         -- 定义主题列表
-        local themes = { "everforest", "nord", "poimandres" }
+        local themes = { "everforest"}
         -- 使用随机数种子
         math.randomseed(os.time())
         -- 随机选择主题
