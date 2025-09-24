@@ -1,6 +1,6 @@
 return {
   {
-    "sainnhe/everforest",
+    "neanias/everforest-nvim",
     lazy = false,
     priority = 1000,
   },
@@ -15,6 +15,12 @@ return {
     priority = 1000,
   },
   {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = function()
@@ -24,12 +30,6 @@ return {
         math.randomseed(os.time())
         -- 随机选择主题
         local theme = themes[math.random(#themes)]
-
-        -- everforest 特定配置
-        if theme == "everforest" then
-          vim.g.everforest_background = "soft"
-          vim.g.everforest_better_performance = 1
-        end
 
         -- nord 特定配置（可选）
         if theme == "nord" then
